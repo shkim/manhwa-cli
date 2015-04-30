@@ -1,0 +1,48 @@
+/* Korean Localizable.strings */
+
+tab_login = "로그인";
+tab_profile = "프로필";
+tab_dir = "디렉토리";
+tab_recent = "최근 본 만화";
+tab_config = "설정";
+
+menu_nextvol = "다음 권 보기";
+menu_prevvol = "이전 권 보기";
+menu_bugreport = "오류 신고";
+
+sect_menu = "메뉴";
+sect_vols = "권 선택";
+
+sect_pagefx = "페이지 전환 효과";
+fx_curl = "종이 감기";
+fx_scroll = "스크롤";
+
+wait_verchk = "서버 정보 확인중입니다.";
+wait_getlist = "목록을 얻고 있습니다.";
+wait_gettitle = "작품 정보를 얻고 있습니다.";
+wait_getvol = "페이지 정보를 얻고 있습니다.";
+
+a_gonext = "다음 권을 이어서 보시겠습니까?";
+a_nonext = "마지막 권입니다.";
+a_1page = "첫 페이지 입니다.";
+a_noscrfx = "iOS 5.x 는 페이지 스크롤 효과를 지원하지 않습니다.";
+a_needupd = "앱 업데이트가 필요합니다.";
+a_gostore = "확인을 누르시면 앱스토어로 이동합니다.";
+a_newver = "새 버전이 있습니다.";
+a_nosvr = "서버에 접속할 수 없습니다.";
+a_uselater = "잠시 후 다시 이용해주세요.";
+a_invsess = "세션 정보 만료";
+a_relogin = "다시 로그인 해주세요.";
+
+ok = "확인";
+cancel = "취소";
+yes = "예";
+no = "아니오";
+close = "닫기";
+back = "뒤로";
+clear = "해제";
+preview = "미리보기";
+config = "설정";
+update = "수정";
+ignore = "무시";
+gostore = "앱스토어로 이동";
