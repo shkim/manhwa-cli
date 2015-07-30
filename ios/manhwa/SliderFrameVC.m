@@ -457,12 +457,21 @@
 		tvc.contentSizeForViewInPopover = CGSizeMake(320, 640);
 	}
 
-	m_popoverMenu = [[UIPopoverController alloc] initWithContentViewController:tvc];
-	m_popoverMenu.delegate = self;
-	
-	[m_popoverMenu presentPopoverFromBarButtonItem:sender
-		permittedArrowDirections:UIPopoverArrowDirectionAny
-		animated:YES];
+	if (GetAppDelegate().isIpad)
+	{
+		m_popoverMenu = [[UIPopoverController alloc] initWithContentViewController:tvc];
+		m_popoverMenu.delegate = self;
+		
+		[m_popoverMenu presentPopoverFromBarButtonItem:sender
+			permittedArrowDirections:UIPopoverArrowDirectionAny
+			animated:YES];
+	}
+	else
+	{
+		tvc.hidesBottomBarWhenPushed = YES;
+		[self.navigationController pushViewController:tvc animated:YES];
+		self.hidesBottomBarWhenPushed = YES;
+	}
 }
 
 // Popover Menu TableView
@@ -567,8 +576,15 @@
 			[self selectVolumeAtIndex:indexPath.row];
 	}
 	
-	[m_popoverMenu dismissPopoverAnimated:YES];
-	m_popoverMenu = nil;
+	if (GetAppDelegate().isIpad)
+	{
+		[m_popoverMenu dismissPopoverAnimated:YES];
+		m_popoverMenu = nil;
+	}
+	else
+	{
+		[self.navigationController popViewControllerAnimated:YES];
+	}
 }
 
 @end
